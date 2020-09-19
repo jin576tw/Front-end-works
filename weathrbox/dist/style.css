@@ -1,0 +1,351 @@
+@charset "UTF-8";
+* {
+  position: relative;
+  font-family: "Hind Vadodara", 微軟正黑體;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  background-color: #E3E3E3;
+}
+
+label {
+  cursor: pointer;
+}
+
+.daybox {
+  width: 50%;
+  max-width: 400px;
+  background-color: #f3f3f3;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.daybox:hover .bottom {
+  height: 100px;
+}
+.daybox:hover .dayweather {
+  opacity: 1;
+  top: 0px;
+}
+
+.temsvg {
+  width: 100%;
+}
+.temsvg polyline {
+  stroke: #f3f3f3;
+  stroke-width: 1px;
+  fill: none;
+  opacity: 0.2;
+}
+.temsvg text {
+  -webkit-transform: translateX(-10px) translateY(20px);
+          transform: translateX(-10px) translateY(20px);
+  font-size: 12px;
+  fill: #f3f3f3;
+  opacity: 0;
+}
+.temsvg circle {
+  fill: #f3f3f3;
+  opacity: 0.1;
+}
+
+.rain {
+  width: 2px;
+  height: 10px;
+  position: absolute;
+  left: 45px;
+  bottom: 15px;
+  -webkit-animation: raindrop 1s infinite linear;
+          animation: raindrop 1s infinite linear;
+  background-color: #f3f3f3;
+}
+
+.rain2 {
+  left: 70px;
+  bottom: 20px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+
+.rain3 {
+  left: 30px;
+  bottom: 20px;
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+}
+
+@-webkit-keyframes raindrop {
+  0% {
+    -webkit-transform: tramslateY(0px);
+            transform: tramslateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+}
+
+@keyframes raindrop {
+  0% {
+    -webkit-transform: tramslateY(0px);
+            transform: tramslateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(50px);
+            transform: translateY(50px);
+    opacity: 0;
+  }
+}
+.top {
+  height: 330px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1D678F), to(#03B3FF));
+  background: linear-gradient(#1D678F, #03B3FF);
+  background-size: 100% 300%;
+  -webkit-animation: daylight 20s both;
+          animation: daylight 20s both;
+  border-radius: 5px 5px 0px 0px;
+}
+@-webkit-keyframes daylight {
+  0% {
+    background-position: 100% 30%;
+  }
+  0% {
+    background-size: 100% 100%;
+  }
+}
+@keyframes daylight {
+  0% {
+    background-position: 100% 30%;
+  }
+  0% {
+    background-size: 100% 100%;
+  }
+}
+.top .moon {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  box-shadow: 15px -15px;
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  -webkit-animation: moonmove 10s infinite;
+          animation: moonmove 10s infinite;
+}
+@-webkit-keyframes moonmove {
+  0% {
+    box-shadow: 15px -15px #FFD633;
+    -webkit-transform: translateX(-15px) translateY(15px);
+            transform: translateX(-15px) translateY(15px);
+  }
+  100% {
+    box-shadow: -30px 30px #FFD633;
+    -webkit-transform: translateX(30px) translateY(-30px);
+            transform: translateX(30px) translateY(-30px);
+  }
+}
+@keyframes moonmove {
+  0% {
+    box-shadow: 15px -15px #FFD633;
+    -webkit-transform: translateX(-15px) translateY(15px);
+            transform: translateX(-15px) translateY(15px);
+  }
+  100% {
+    box-shadow: -30px 30px #FFD633;
+    -webkit-transform: translateX(30px) translateY(-30px);
+            transform: translateX(30px) translateY(-30px);
+  }
+}
+.cloud {
+  width: 100px;
+  height: 36px;
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  border-radius: 20px;
+  background-color: #f2f9fe;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  -webkit-animation: clouddrift 4s infinite;
+          animation: clouddrift 4s infinite;
+}
+.cloud:before, .cloud:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  position: absolute;
+  background-color: #f2f9fe;
+}
+.cloud:before {
+  left: 16px;
+  top: -28px;
+}
+.cloud:after {
+  left: 35px;
+  top: -20px;
+}
+
+@-webkit-keyframes clouddrift {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes clouddrift {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+.bottom {
+  height: 10px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+  border-radius: 0px 0px 5px 5px;
+  overflow: hidden;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+.bottom .dayweather {
+  width: calc(100% / 7 - 5px);
+  display: inline-block;
+  text-align: center;
+  opacity: 0;
+  top: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 8px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: rbga(#E3E3E3, 0.3);
+}
+.bottom .dayweather svg {
+  width: 100%;
+  max-width: 40px;
+  height: 40px;
+}
+.bottom .dayweather svg .sun {
+  fill: #FFD633;
+  stroke: rgba(255, 214, 51, 0.5);
+  stroke-width: 30px;
+  stroke-dasharray: 5px;
+}
+.bottom .dayweather svg .rain {
+  stroke: #4DACFF;
+  stroke-width: rbga;
+}
+.bottom .dayweather svg .cloud {
+  fill: #ccc;
+}
+
+.dayweather:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.dayweather:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.dayweather:nth-child(3) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.dayweather:nth-child(4) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
+.dayweather:nth-child(5) {
+  -webkit-transition-delay: 1s;
+          transition-delay: 1s;
+}
+
+.dayweather:nth-child(6) {
+  -webkit-transition-delay: 1.2s;
+          transition-delay: 1.2s;
+}
+
+.dayweather:nth-child(7) {
+  -webkit-transition-delay: 1.4s;
+          transition-delay: 1.4s;
+}
+
+.text_area {
+  display: inline-block;
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: #f3f3f3;
+}
+.text_area .temperature {
+  font-size: 75px;
+  line-height: 70px;
+}
+.text_area .infos {
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.moon, .cloud {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.temsvg circle, .temsvg polyline, .temsvg text {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.temsvg polyline {
+  -webkit-transition: 0.5s 0.3s;
+  transition: 0.5s 0.3s;
+}
+.temsvg text {
+  -webkit-transition: 0.5s 1s;
+  transition: 0.5s 1s;
+}
+
+#switch_night {
+  display: none;
+}
+
+#switch_night:checked + .top .moon, #switch_night:checked + .top .cloud {
+  opacity: 0.2;
+}
+#switch_night:checked + .top .temsvg circle, #switch_night:checked + .top .temsvg polyline, #switch_night:checked + .top .temsvg text {
+  opacity: 1;
+}
