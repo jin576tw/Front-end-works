@@ -1,0 +1,205 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+body {
+  height: 1000px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+nav.navbar {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav.navbar.fixed-top.navbar-expand-md.navbar-top {
+  background-color: transparent;
+}
+nav.navbar.fixed-top.navbar-expand-md.navbar-top a {
+  color: white;
+}
+nav.navbar.fixed-top.navbar-expand-md.navbar-top a:hover {
+  color: #F2505D;
+}
+
+header.jumbotron {
+  color: white;
+  text-align: center;
+  background-image: url(https://i.imgur.com/LEb1NNX.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+header.jumbotron .container {
+  color: white;
+  padding: 200px 0px;
+}
+header.jumbotron .explore {
+  font-size: 3px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header.jumbotron .explore:after {
+  display: block;
+  content: "⇓";
+}
+header.jumbotron .explore:hover {
+  color: #F2505D;
+}
+
+section {
+  padding: 50px 0px;
+}
+
+section#section_about {
+  color: #00455F;
+}
+section#section_about .col-sm-5.img {
+  background-image: url(https://i.imgur.com/umMHcPT.jpg);
+  height: 350px;
+}
+section#section_about .img {
+  background-size: 100% auto;
+  width: 100px;
+  background-repeat: no-repeat;
+}
+section#section_about h2, section#section_about p {
+  margin-top: 5px;
+  padding: 0px 30px;
+}
+
+section#section_ability {
+  background-color: #FF9191;
+  color: #00455F;
+}
+section#section_ability img {
+  display: inline-block;
+  vertical-align: right;
+  margin: 30px;
+  width: 73%;
+}
+section#section_ability .img_warp {
+  height: 230px;
+  overflow: hidden;
+}
+section#section_ability h3 {
+  text-align: center;
+}
+
+section#section_story {
+  background-color: #0388A6;
+  color: white;
+}
+section#section_story .col-sm-5.img {
+  background-image: url(https://i.imgur.com/3mmGK4u.jpg);
+  height: 350px;
+}
+section#section_story .img {
+  margin-top: 60px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+section#section_story h2, section#section_story p {
+  margin-top: 0px;
+  padding: 0px;
+  padding-right: 30px;
+}
+
+section#section_works {
+  color: #00455F;
+}
+section#section_works h3 {
+  cursor: pointer;
+}
+section#section_works img {
+  cursor: pointer;
+  width: 100%;
+}
+section#section_works img:hover {
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 0.6;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+section#section_works i {
+  font-size: 30px;
+}
+section#section_works .feature {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+
+footer.jumbotron {
+  text-align: center;
+  background-image: url(https://i.imgur.com/bXq05A6.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin-bottom: 0px;
+}
+footer.jumbotron input {
+  background-color: transparent;
+  max-width: 350px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+footer.jumbotron .container {
+  color: white;
+  padding: 200px 0px;
+}
+footer.jumbotron hr {
+  max-width: 50px;
+  border: solid 2px #F2505D;
+}
+
+@media screen and (max-width: 800px) {
+  header#header_index.jumbotron {
+    height: 400px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  header#header_index.jumbotron h1 {
+    text-align: left;
+    font-size: 34px;
+  }
+
+  section#section_about h2 {
+    font-size: 28px;
+  }
+  section#section_about .img {
+    width: 100%;
+  }
+
+  section#section_ability .col-md-3 {
+    padding: 5px;
+  }
+  section#section_ability .col-md-3 .img_warp, section#section_ability .col-md-3 h3 {
+    display: inline-block;
+    vertical-align: center;
+    width: 250px;
+    margin-left: 40px;
+    padding: 5px;
+  }
+
+  section#section_story .img {
+    left: -2px;
+    width: 100%;
+  }
+
+  section#section_works .col-sm-6.feature {
+    left: -40px;
+  }
+  section#section_works .col-sm-6.reverse_pic {
+    top: -260px;
+  }
+  section#section_works .col-sm-6.reverse_text {
+    top: 290px;
+  }
+  section#section_works .col-sm-6.reverse_text2 {
+    top: 260px;
+  }
+}
