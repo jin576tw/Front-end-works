@@ -1,0 +1,179 @@
+@charset "UTF-8";
+* {
+  position: relative;
+  font-family: "Heiti TC", "HeitiTC-Light", "LiHei", "微軟正黑體", "Lato", "Verdana";
+  vertical-align: top;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f3f1;
+}
+
+.classbox {
+  width: 260px;
+  background-color: white;
+  color: #4F4C4B;
+  border-radius: 5px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 30px 15px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+.classbox .teacher {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 15px;
+  top: -27.5px;
+  border-radius: 50%;
+  background-image: url("https://hahow.in/images/57ab3d5585b097070042067a");
+  background-size: cover;
+  border: solid 2px white;
+  z-index: 9;
+}
+.classbox:hover .bookbtn {
+  bottom: 10px;
+}
+.classbox:hover .classpicture {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+}
+.classbox:hover .bottom .valuebar {
+  width: 200px;
+}
+
+.top {
+  height: 160px;
+  overflow: hidden;
+}
+.top .tag {
+  width: 100%;
+  text-align: center;
+  -webkit-transform: translateX(95px) translateY(15px) rotate(45deg);
+          transform: translateX(95px) translateY(15px) rotate(45deg);
+  background-color: #EB5E00;
+  color: white;
+  font-weight: 700px;
+  padding: 5px 0px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+.top .classpicture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("https://hahow.in/images/574fab4f206cd60900c52a67?width=300");
+  background-size: cover;
+  left: 0;
+  top: 0;
+  border-radius: 5px 5px 0px 0px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.top .bookbtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  bottom: -50px;
+  background-color: #fff;
+  color: #EB5E00;
+  cursor: pointer;
+  -webkit-transition: bottom 0.3s;
+  transition: bottom 0.3s;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+.top .bookbtn i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.top .bookbtn:hover {
+  background-color: #EB5E00;
+  color: white;
+}
+
+.bottom {
+  height: 184px;
+  font-size: 22px;
+  padding: 15px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+.bottom .classtitle {
+  font-size: 25px;
+  margin-top: 0px;
+}
+.bottom .texts {
+  font-size: 15px;
+}
+.bottom .texts .orange {
+  padding-left: 5px;
+  letter-spacing: 1px;
+  color: #FA8B00;
+}
+.bottom .pricerow {
+  margin-bottom: 10px;
+}
+.bottom .pricerow .lastday {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.bottom .progressbar {
+  height: 10px;
+  margin-bottom: 10px;
+  background-color: #e0e0db;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bottom .progressbar .valuebar {
+  width: 100px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 100%;
+  background-color: #FA8B00;
+  border-radius: 5px 0px 0px 5px;
+}
+.bottom .nowpeople {
+  text-align: center;
+}
+.bottom .orangbar {
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #EB5E00;
+  border-radius: 0px 0px 5px 5px;
+}
+
+#app {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  height: 400px;
+  background: linear-gradient(-45deg, #FFE18D 10%, #FFE18D 10%, #FFDA71 10%, #FFDA71 40%, #FFE18D 40%, #FFE18D 60%, #FFDA71 60%, #FFDA71 90%, #FFE18D 90%, #FFE18D 100%);
+  background-size: 46px 46px;
+  margin-bottom: 30px;
+}
+.navbar .info {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding: 20px;
+  width: 1024px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}

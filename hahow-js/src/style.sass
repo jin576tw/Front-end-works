@@ -1,0 +1,190 @@
+//顏色定義區(橘/灰/深橘)
+$color_orange: #FA8B00
+$color_grey: #f3f3f1
+$color_dark_orange: #EB5E00
+$color_yellow: #FFE18D
+$color_dark_yellow: #FFDA71
+$color_dark_grey: #4F4C4B
+
+//尺寸定義區 (標題/內文/書籤按鈕/書籤icon/老師icon)
+$size_title: 25px
+$size_para: 15px
+$size_bookbtn: 42px
+$size_icon: 22px
+$size_teacher: 55px
+
+//尺寸(課程/上下半部/進度條/預購價/底部橘條)
+$width_class: 260px
+$height_toppart: 160px
+$height_bottompart: 184px
+$height_progressbar: 10px
+$height_pricerow: 22px
+$height_bottomorange: 5px
+
+//尺寸(課程框框的padding)
+$padding_class: 15px
+
+//預設圖片Url
+$url_teacher: "https://hahow.in/images/57ab3d5585b097070042067a"
+$url_class: "https://hahow.in/images/574fab4f206cd60900c52a67?width=300"
+
+
+*
+  // border: solid 1px
+  position: relative
+  font-family: "Heiti TC","HeitiTC-Light","LiHei","微軟正黑體","Lato","Verdana"
+  vertical-align: top
+
+html,body
+  margin: 0
+  padding: 0
+
+body
+  // padding: 30px
+  background-color: $color_grey 
+
+@mixin bsha
+  box-shadow: 0px 0px 12px rgba(#000,0.2)
+    
+.classbox
+  width: $width_class
+  background-color: white
+  color: $color_dark_grey
+  border-radius: 5px 
+  cursor: pointer
+  display: inline-block
+  margin: 30px 15px
+  +bsha
+
+  .teacher
+    width: $size_teacher
+    height: $size_teacher
+    position: absolute
+    left: $padding_class
+    top: -$size_teacher/2 
+    border-radius: 50%
+    background-image: url($url_teacher)
+    background-size: cover
+    border: solid 2px white 
+    z-index: 9
+  &:hover
+      .bookbtn
+        bottom: 10px 
+      .classpicture
+        transform: scale(1.13)
+      .bottom
+        .valuebar
+          width: 200px
+     
+.top
+  height: $height_toppart
+  overflow: hidden
+  .tag
+    width: 100%
+    text-align: center
+    transform: translateX(95px) translateY(15px) rotate(45deg)
+    background-color: $color_dark_orange
+    color: white
+    font-weight: 700px
+    padding: 5px 0px
+    +bsha
+    
+  .classpicture
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: url($url_class)
+    background-size: cover
+    left: 0
+    top: 0
+    border-radius: 5px 5px 0px 0px 
+    transition: 0.3s
+    
+  .bookbtn
+    width: 42px
+    height: 42px
+    border-radius: 50%
+    position: absolute
+    left: $padding_class
+    bottom: -50px
+    background-color: #fff
+    color: $color_dark_orange
+    cursor: pointer 
+    transition: bottom 0.3s
+    +bsha
+    i
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%,-50%)
+    &:hover
+      background-color: $color_dark_orange
+      color: white
+    
+    
+.bottom
+  height: $height_bottompart
+  font-size: $size_icon
+  padding: $padding_class
+  +bsha
+  .classtitle
+    font-size: $size_title
+    margin-top: 0px
+  .texts
+    font-size: $size_para
+    .orange
+      padding-left: 5px
+      letter-spacing: 1px
+      color: $color_orange
+  .pricerow
+    margin-bottom: 10px 
+    .lastday
+      position: absolute
+      top: 0
+      right: 0
+    
+  .progressbar
+    height: 10px
+    margin-bottom: 10px
+    background-color: darken($color_grey,8)
+    border-radius: 5px
+    overflow: hidden
+    .valuebar
+      width: 100px
+      transition: 0.5s
+      height: 100%
+      background-color: $color_orange
+      border-radius: 5px 0px 0px 5px
+
+  .nowpeople
+    text-align: center
+  .orangbar
+    height: 5px
+    width: 100%
+    position: absolute
+    bottom: 0px
+    left: 0px
+    background-color: $color_dark_orange
+    border-radius: 0px 0px 5px 5px 
+  
+#app
+    max-width: 1200px
+    margin-left: auto
+    margin-right: auto
+.navbar
+  height: 400px
+  background: linear-gradient(-45deg,$color_yellow 10%,$color_yellow 10%,$color_dark_yellow 10%,$color_dark_yellow 40%,$color_yellow 40%,$color_yellow 60%,$color_dark_yellow 60%,$color_dark_yellow 90%,$color_yellow 90%,$color_yellow 100%)
+  background-size: 46px 46px
+  margin-bottom: 30px
+  
+  .info
+    +bsha
+    background-color: #fff
+    padding: 20px
+    width: 1024px
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%,-50%)
+
+    
