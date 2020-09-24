@@ -1,0 +1,210 @@
+$color_blue:  #0388A6
+$color_darkblue: #00455F 
+$color_pink: #F2505D
+$break_width: 800px
+
+
+*
+ font-family: 微軟正黑體
+ // border: solid 1px
+
+ 
+  
+body
+ height: 1000px
+  
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6
+ font-weight: bold
+
+nav.navbar
+  transition: 0.5s
+
+nav.navbar.fixed-top.navbar-expand-md.navbar-top
+  background-color: transparent
+  a
+    color: white
+    &:hover
+     color: $color_pink
+    
+  
+header.jumbotron
+  color:  white
+  text-align: center
+  background-image: url(https://i.imgur.com/LEb1NNX.jpg)
+  background-size: cover
+  background-attachment: fixed
+  margin-bottom: 0px
+  // h1
+  //  &:hover
+  //   transition: 0.5s
+  //   color: $color_pink
+    
+  .container
+    color: white
+    padding: 200px 0px
+  
+  .explore
+   font-size: 3px
+   transition: 0.5s
+   &:after
+    display: block
+    content: "⇓"
+    
+   &:hover
+     color: $color_pink
+  
+
+section
+  padding: 50px 0px
+  
+section#section_about
+  color: $color_darkblue
+  .col-sm-5.img
+    background-image: url(https://i.imgur.com/umMHcPT.jpg)
+    height: 350px
+  .img
+    background-size: 100% auto
+    width: 100px
+    background-repeat: no-repeat
+    
+  h2,p
+    margin-top: 5px
+    padding: 0px 30px 
+  
+section#section_ability
+  background-color: #FF9191
+  color: $color_darkblue
+  img 
+    display: inline-block
+    vertical-align: right
+    margin: 30px
+    width: 73%
+  .img_warp
+    height: 230px
+    overflow: hidden
+  h3
+    text-align: center
+  
+section#section_story
+  background-color: #0388A6
+  color: white
+  .col-sm-5.img
+    background-image: url(https://i.imgur.com/3mmGK4u.jpg)
+    height: 350px
+  .img
+    margin-top: 60px
+   
+    background-size: 100% auto
+    background-repeat: no-repeat
+  h2,p
+    margin-top: 0px
+    padding: 0px
+    padding-right: 30px
+
+section#section_works
+  color: $color_darkblue
+
+  h3
+    cursor: pointer
+  img
+    cursor: pointer
+    width: 100%
+    &:hover
+      color: rgba(0,0,0,0.7)
+      opacity: 0.6 
+      transition: 0.5s
+  i
+    font-size: 30px
+  .feature
+    
+    left: 70px
+    padding-top: 30px
+    padding-bottom: 50px
+    &.text
+      top: 0px
+    &.weather_text
+    top: 60px
+    &.shoplist
+    top: 70px
+     
+footer.jumbotron
+   
+  text-align: center
+  background-image: url(https://i.pinimg.com/564x/a6/41/5c/a6415cb3d417daff6cc6417e3d0d75d4.jpg)
+  background-size: cover
+  background-attachment: fixed
+  margin-bottom: 0px
+  background-repeat: no-repeat
+  input
+    
+    background-color: transparent
+    max-width: 350px
+    text-align: center
+    margin-left: auto
+    margin-right: auto
+  .container
+    color: $color_pink  
+    padding: 200px 0px
+  hr
+    max-width: 50px
+    border: solid 2px  $color_pink
+    
+@viewport 
+    width: device-width
+    zoom: 1.0
+    min-zoom: 0.5
+    max-zoom: 2.0
+    user-zoom: zoom
+
+@media screen and (max-width: $break_width)
+  header#header_index.jumbotron    
+   height: 400px
+   background-size: 100%
+   background-repeat: no-repeat
+   h1
+    text-align: left
+    font-size: 34px
+  section#section_about
+   h2
+    font-size: 28px
+   .img
+     width: 100%
+  section#section_ability
+   .col-md-3
+    padding: 5px
+    .img_warp,h3
+      display: inline-block
+      vertical-align: center
+      width: 250px
+      margin-left: 50px
+      padding: 5px
+      
+  section#section_story
+    .img
+      left: -2px
+      width: 100%
+      
+  section#section_works
+    .col-sm-6.feature
+      left: 10px
+    .col-sm-6.reverse_pic
+      top: -280px
+    .col-sm-6.feature.shoplist
+      top: 0px
+    .col-sm-6.weather_text
+      top: 260px
+    .col-sm-6.Hahow_text
+      top: 250px
+      
+  footer.jumbotron
+   background-color: #FFE3BC 
+  
+      
+
+      
+    
+    
+     
+      
+
+     
