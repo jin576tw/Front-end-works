@@ -1,0 +1,121 @@
+$content_max_width: 1024px
+$color_lightblue: #E9EBEE
+$color_blue: #3B5998
+$color_white: #fff
+$color_black: #555
+$break_width: 800px
+
+*
+ // border: solid 1px black
+ vertical-align: middle
+ position: relative
+ font-family: 微軟正黑體
+  
+html,body
+ margin: 0
+ padding: 0
+ background-color: $color_lightblue
+
+.container
+  max-width: $content_max_width
+  margin-left: auto
+  margin-right: auto
+.topbar
+  background-color: $color_blue
+  height: 50px
+  .icon
+    height: 30px
+    margin: 10px
+  input
+    height: 30px
+    margin: 10px
+    margin-left: 0px
+    width: 300px
+    border-radius: 5px
+    padding-left: 10px
+    border: none
+.cover
+  height: 330px
+  background-image: url("https://scontent.ftpe8-1.fna.fbcdn.net/v/t1.0-9/100562764_3802652559761635_6136004408955109376_o.jpg?_nc_cat=105&_nc_sid=e3f864&_nc_ohc=051eG-Y-OV0AX-4ljBI&_nc_ht=scontent.ftpe8-1.fna&oh=183af2f8daaa6cfe5d471c2f71e90bab&oe=5F8BFDB5")
+  background-position: 0 
+.midbar
+  height: 60px
+  background-color: $color_white
+  .personimg
+    width: 180px
+    height: 180px
+    background-image: url("https://scontent.ftpe8-1.fna.fbcdn.net/v/t1.0-9/60907839_2931475436879356_2786223895701618688_n.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=PQ4nQZC8rXMAX-GQaTY&_nc_ht=scontent.ftpe8-1.fna&oh=36243f291016e479a5bc9ee38b8ed89e&oe=5F8B9441")
+    background-size: 100% auto
+    border: solid 4px white
+    border-radius: 50%
+    position: absolute
+    top: -130px
+    left: 20px
+    .names
+      color: white
+      position: absolute
+      right: -130px
+      top: 50%
+      transform: translateY(-50%)
+      h2,h5
+        margin: 0
+      h2
+        font-size: 34px
+      h5
+        font-size: 16px
+
+          
+.bottombar
+  background-color: $color_white
+  width: 35%
+  min-width: 350px
+  padding: 20px
+  font-size: 14px
+  line-height: 25px
+  margin-top: 10px
+  p
+    font-size: 13px
+    line-height: 25px
+    i
+      width: 20px
+      vertical-align: middle
+    span
+      vertical-align: middle
+    
+@media screen and (max-width: $break_width)
+  .topbar
+    height: 60px
+    .icon
+      height: 40px
+      margin: 10px
+    input
+      height: 35px
+      width: calc( 100% - 40px - 60px)
+      margin-top: 12.5px
+      background-color: darken($color_blue,15)
+      color: darken(white,100)
+  .midbar
+     height: 140px
+     .personimg
+        width: 200px
+        height: 200px
+        left: 50%
+        transform: translateX(-50%)
+        .names
+          right: initial
+          left: 50%
+          top: 100%
+          transform: translateX(-50%)
+          white-space: nowrap
+          color: $color_black
+      
+  .bottombar
+      margin: 0px
+      width: 100%
+      box-sizing: border-box
+      p
+        padding-top: 10px
+        padding-left: 20px
+        padding-right: 20px
+        font-size: 13px
+        border-top: solid 1px rgba(black,0.2)

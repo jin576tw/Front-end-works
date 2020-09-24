@@ -1,0 +1,146 @@
+@charset "UTF-8";
+* {
+  vertical-align: middle;
+  position: relative;
+  font-family: 微軟正黑體;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #E9EBEE;
+}
+
+.container {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.topbar {
+  background-color: #3B5998;
+  height: 50px;
+}
+.topbar .icon {
+  height: 30px;
+  margin: 10px;
+}
+.topbar input {
+  height: 30px;
+  margin: 10px;
+  margin-left: 0px;
+  width: 300px;
+  border-radius: 5px;
+  padding-left: 10px;
+  border: none;
+}
+
+.cover {
+  height: 330px;
+  background-image: url("https://scontent.ftpe8-1.fna.fbcdn.net/v/t1.0-9/100562764_3802652559761635_6136004408955109376_o.jpg?_nc_cat=105&_nc_sid=e3f864&_nc_ohc=051eG-Y-OV0AX-4ljBI&_nc_ht=scontent.ftpe8-1.fna&oh=183af2f8daaa6cfe5d471c2f71e90bab&oe=5F8BFDB5");
+  background-position: 0;
+}
+
+.midbar {
+  height: 60px;
+  background-color: #fff;
+}
+.midbar .personimg {
+  width: 180px;
+  height: 180px;
+  background-image: url("https://scontent.ftpe8-1.fna.fbcdn.net/v/t1.0-9/60907839_2931475436879356_2786223895701618688_n.jpg?_nc_cat=110&_nc_sid=174925&_nc_ohc=PQ4nQZC8rXMAX-GQaTY&_nc_ht=scontent.ftpe8-1.fna&oh=36243f291016e479a5bc9ee38b8ed89e&oe=5F8B9441");
+  background-size: 100% auto;
+  border: solid 4px white;
+  border-radius: 50%;
+  position: absolute;
+  top: -130px;
+  left: 20px;
+}
+.midbar .personimg .names {
+  color: white;
+  position: absolute;
+  right: -130px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.midbar .personimg .names h2, .midbar .personimg .names h5 {
+  margin: 0;
+}
+.midbar .personimg .names h2 {
+  font-size: 34px;
+}
+.midbar .personimg .names h5 {
+  font-size: 16px;
+}
+
+.bottombar {
+  background-color: #fff;
+  width: 35%;
+  min-width: 350px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 25px;
+  margin-top: 10px;
+}
+.bottombar p {
+  font-size: 13px;
+  line-height: 25px;
+}
+.bottombar p i {
+  width: 20px;
+  vertical-align: middle;
+}
+.bottombar p span {
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 800px) {
+  .topbar {
+    height: 60px;
+  }
+  .topbar .icon {
+    height: 40px;
+    margin: 10px;
+  }
+  .topbar input {
+    height: 35px;
+    width: calc( 100% - 40px - 60px);
+    margin-top: 12.5px;
+    background-color: #263961;
+    color: black;
+  }
+
+  .midbar {
+    height: 140px;
+  }
+  .midbar .personimg {
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  .midbar .personimg .names {
+    right: initial;
+    left: 50%;
+    top: 100%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    white-space: nowrap;
+    color: #555;
+  }
+
+  .bottombar {
+    margin: 0px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .bottombar p {
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 13px;
+    border-top: solid 1px rgba(0, 0, 0, 0.2);
+  }
+}
