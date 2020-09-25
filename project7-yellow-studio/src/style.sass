@@ -1,0 +1,316 @@
+//顏色定義
+$color_blue: #282f44
+$color_brown: #E6AF2E
+$color_yellow: #f5d061
+$color_white: #ececec
+//-------------------------------------
+//改變預設字型
+*
+  font-family: 'Oswald', 微軟正黑體
+  // border: solid 1px !important
+
+//-------------------------------------
+//一些常用的mixin
+@mixin ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+  
+//-------------------------------------
+html,body
+  overflow-x: hidden
+  font-size: 16px
+  
+//首頁
+header
+  position: relative
+  background-color: $color_blue
+  text-align: center
+  .icon
+    width: 80%
+    max-width: 250px
+    padding: 250px 0px
+    
+  //底部邊界
+  .marginbottom
+    position: absolute
+    width: 95%
+    bottom: 0px
+    right: 0px
+    z-index: 3
+    animation: upin 2s both
+    
+  @keyframes upin
+    0%
+      bottom: -100px
+    100%
+      bottom: 0px
+    
+  .explore
+    +ab_center
+    font-size: 16px
+    color: $color_yellow
+    top: 85%
+    opacity: 0
+    transition: 0.5s
+    &:after
+      display: block
+      content: "v"
+      transform: scaleX(1.2) scaleY(0.5)
+    &.at_top
+      opacity: 1
+//-------------------------------------
+//導覽列
+nav.navbar
+  transition: 0.5s
+  a
+    transition: 0.5s
+//--導覽列在上方時透明
+nav.navbar.at_top
+  background-color: transparent
+  a, a:visited
+    color: white
+//-------------------------------------
+//區域的共同設定
+section
+  padding: 60px
+  position: relative
+//-------------------------------------
+//Section 簡介
+section#section_about
+  background-color: $color_brown
+  //旋轉的grid
+  .container
+    transform: rotate(15deg) scale(0.9)
+    
+  .row
+    height: 150px
+    color: black
+    .r1text
+      font-size: 80px
+      transition: 0.1s 
+    .r2text
+      font-size: 35px
+      transition: 0.2s
+    .r3text
+      font-size: 50px
+      transition: 0.3s
+      text-align: right
+  .cat
+    width: 30%
+    max-width: 300px
+    position: absolute
+    bottom: -2px
+    right: 25px
+  
+  //底部邊界
+  .marginbottom
+    position: absolute
+    width: 60%
+    top: calc(100% - 2px)
+    z-index: 3
+    
+  .btn-area
+    height: 150px
+  a
+    +ab_center
+    transform: translate(-50%,-50%) rotate(10deg)
+    
+    
+  //滑鼠的叉叉
+  #cross
+    position: absolute
+    z-index: 5
+    
+    //讓滑鼠點擊會穿過
+    pointer-events: none
+    
+    &:before,&:after
+      content: ""
+      display: block
+    
+      +size(80px,15px)
+      background-color: #fff
+      +ab_center
+      transform: translate(-50%,-50%) rotate(45deg)
+    
+    &:after
+      transform: translate(-50%,-50%) rotate(136deg)
+    
+  //三角形碎塊
+  .tri
+    transform: rotate(-15deg)
+  .tri1
+    width: 350px
+  .tri2
+    width: 20px
+    margin-left: 20px
+  .tri3
+    width: 150px
+    margin-left: 70%
+  .tri4
+    width: 70px
+    margin-left: 100%
+  .tri5
+    width: 80px
+    margin-left: 100%
+//-------------------------------------
+//Section 服務
+section#section_service
+  background-color: $color_white
+  padding: 80px 0px
+  
+  .col-sm-4
+    text-align: center
+    
+  h1
+    background-color: $color_blue
+    color: $color_white
+    font-size: 24px
+    padding: 5px 20px
+    display: inline-block
+    font-weight: normal
+    
+  h3 
+    color: $color_brown
+    
+  .icon_service
+    width: 60%
+//-------------------------------------
+//Section 作品
+section#section_works
+  background-color: $color_white
+  padding-top: 0px
+  h1
+    background-color: $color_blue
+    color: $color_white
+    font-size: 24px
+    padding: 6px 25px
+    display: inline-block
+    font-weight: normal
+    
+  .marginbottom
+    position: absolute
+    width: 90%
+    right: 0px
+    top: calc(100% - 2px)
+    z-index: 3
+    max-width: 900px
+    
+  .col-sm-6
+    overflow: hidden
+  
+  .work
+    height: 230px
+    cursor: pointer
+    position: relative
+    padding: 5px
+    
+    &.big
+      height: 460px
+      
+    &:before
+      content: ""
+      display: block
+      +size(100%,100%)
+    
+      position: absolute
+      left: 0
+      top: 0
+      
+      background-color: rgba(0,0,0,0.7)
+      opacity: 0
+      z-index: 5
+      transition: 0.5s
+      
+    .texts
+      +ab_center
+      z-index: 5
+      opacity: 0
+      color: white
+      transition: 0.5s
+      
+    .title
+      line-height: 24px
+      
+    &:hover
+      &:before,.texts
+        opacity: 1
+      
+  .work img
+    height: 100%
+    +ab_center
+    
+//-------------------------------------
+//Section 聯絡資訊
+section#section_contact
+  background-color: $color_blue
+  color: white
+  overflow: hidden  
+
+  //信件
+  .mails
+    max-width: 500px
+    
+
+  .mailbody
+    background-color: $color_white
+    color: $color_blue
+    
+    padding: 20px
+    padding-left: 40px
+
+    transform: translateX(-30px) 
+    
+    label
+      margin-top: 10px
+    
+    input,textarea
+      display: block
+      background-color: transparent
+      
+      border: none
+      border: solid 3px $color_blue
+      
+      padding: 1px 2px
+      
+    textarea
+      height: 140px
+      width: 100%
+      
+  //信封
+  .mailcover
+    +ab_center
+    top: 70%
+    transform: rotate(5deg) scale(2) translate(-50%,-50%)
+    img
+      width: 120%
+      
+  .cat
+    width: 150px
+    position: absolute
+    bottom: 0px
+    transition: 0.3s
+  #cat_blue
+    right: 240px
+    z-index: 3
+  #cat_grey
+    right: 100px
+  #cat_yellow
+    right: 170px
+    
+//-------------------------------------
+//footer 底部
+footer#footer
+  background-color: $color_brown
+  text-align: center
+  
+  .icon
+    width: 80%
+    max-width: 250px
+    padding: 80px 0px

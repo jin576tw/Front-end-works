@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Project7 Yellow Studio</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Oswald:300,400,700'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-default navbar-fixed-top at_top">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="navbar-brand" href="#header_index">Yellow Studio</a>
+    </div>
+    <div class="navbar-collapse collapse" id="navbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#section_about">About</a></li>
+        <li><a href="#section_works">Works<span class="sr-only">(current)</span></a></li>
+        <li><a href="#section_contact">Contact</a></li>
+      </ul>
+    </div>
+    <!-- /.nav-collapse-->
+  </div>
+</nav>
+<!--首頁-->
+<header id="header_index">
+  <div class="container"><img class="icon" src="http://awiclass.monoame.com/img/webpic/w_icon.svg"/><img class="marginbottom mountain" src="http://awiclass.monoame.com/img/margin/m_index.svg"/></div>
+  <div class="explore at_top">EXPLORE</div>
+</header>
+<!--關於-->
+<section id="section_about">
+  <div class="container">
+    <!--第一行-標題-->
+    <div class="row">
+      <div class="col-sm-8 col-sm-offset-4"><img class="tri1" src="http://awiclass.monoame.com/img/webpic/w_tri1.svg"/>
+        <h2 class="r1text">WORKS IN YELLOW</h2>
+      </div>
+    </div>
+    <!--第二行-標題跟兩個三角形-->
+    <div class="row">
+      <div class="col-sm-4"><img class="tri2" src="http://awiclass.monoame.com/img/webpic/w_tri2.svg"/></div>
+      <div class="col-sm-8"><img class="tri3" src="http://awiclass.monoame.com/img/webpic/w_tri3.svg"/>
+        <h3 class="r2text">YELLOW STUDIO-Website Design / Development</h3>
+        <h3 class="r2text">Interactive Art Design</h3>
+      </div>
+    </div>
+    <!--第三行-標題-->
+    <div class="row">
+      <div class="col-sm-8">
+        <h2 class="r3text">430 MORE SUCCESS CASES</h2>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <!--第三行-按鈕跟兩個三角形-->
+    <div class="row">
+      <div class="col-sm-4 btn-area"><a class="btn btn-lg btn-default" href="#section_works">MORE STORY</a><img class="tri4" src="http://awiclass.monoame.com/img/webpic/w_tri4.svg"/></div>
+      <div class="col-sm-4"><img class="tri5" src="http://awiclass.monoame.com/img/webpic/w_tri5.svg"/></div>
+    </div>
+  </div>
+  <div id="cross"></div><img class="cat" id="cat" src="http://awiclass.monoame.com/catpic/cat_leftop.png"/><img class="marginbottom" src="http://awiclass.monoame.com/img/margin/m_about.svg"/>
+</section>
+<!--服務-->
+<section id="section_service">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1>Service</h1>
+      </div>
+      <div class="col-sm-4"><img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon1.svg"/>
+        <h3>CI/VI Design</h3>
+      </div>
+      <div class="col-sm-4"><img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon2.svg"/>
+        <h3>MotionGraphic</h3>
+      </div>
+      <div class="col-sm-4"><img class="icon_service" src="http://awiclass.monoame.com/img/webpic/w_service_icon3.svg"/>
+        <h3>Web Development</h3>
+      </div>
+    </div>
+  </div>
+</section>
+<!--作品-->
+<section id="section_works"><img class="marginbottom mountain" src="http://awiclass.monoame.com/img/margin/m_works.svg"/>
+  <div class="container" id="app">
+    <div class="row" v-if="works.length&gt;0">
+      <div class="col-sm-12">
+        <h1>Works</h1>
+      </div>
+      <div class="col-sm-6 work big"><img v-bind:src="works[1].img"/>
+        <div class="texts">
+          <h4 class="title">{{works[1].name}}</h4>
+          <p class="content" v-html="works[1].content.substr(0,40)"></p>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="col-sm-6 work" v-for="w in works.slice(2,6)"><img v-bind:src="w.img"/>
+          <div class="texts">
+            <h4 class="title">{{w.name}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--聯絡-->
+<section id="section_contact">
+  <!--三站貓--><img class="cat" id="cat_blue" src="http://awiclass.monoame.com/catpic/cat_blue_cat.png"/><img class="cat" id="cat_grey" src="http://awiclass.monoame.com/catpic/cat_yellow_cat.png"/><img class="cat" id="cat_yellow" src="http://awiclass.monoame.com/catpic/cat_grey_cat.png"/>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <!--信件容器 限制最大寬度-->
+        <div class="mails">
+          <!--信封-->
+          <div class="mailcover"><img src="http://awiclass.monoame.com/img/webpic/w_mail_cover.svg"/></div>
+          <!--信紙-->
+          <div class="mailbody">
+            <h5>Dear Yellow Studio</h5>
+            <label>Name</label>
+            <input/>
+            <label>Email</label>
+            <input/>
+            <label>Content</label>
+            <textarea></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <h2>CONTACT</h2><br/>
+        <p>If you have any question about us,<br>Don`t hestitate to contact us !</p><br/><br/>
+        <p>YELLOWSTUDIO@gmail.com<br>ADDRESS: TAIWAN, TAIPEI , XORO Road<br>Phone: 02-12345678</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--footer-->
+<footer id="footer"><img class="icon" src="http://awiclass.monoame.com/img/webpic/w_icon_black.svg"/></footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.8/vue.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
